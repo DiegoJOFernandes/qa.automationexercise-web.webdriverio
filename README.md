@@ -118,3 +118,14 @@ O pipeline está configurado no GitHub Actions e realiza as seguintes etapas:
 - **Organização em Page Objects**: Todos os elementos e interações estão encapsulados em classes de Page Objects, garantindo maior reutilização e legibilidade.
 - **Testes em Suítes**: Cada caso de teste é mantido em arquivos separados dentro da pasta `specs/`.
 - **Relatórios Detalhados**: Integração com Allure Reports para visualização clara dos resultados.
+
+## **Autor**
+
+- Nome: Diego Fernandes
+- Contato: https://www.linkedin.com/in/diego-fernandes-it
+
+---
+
+## **Licença**
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
