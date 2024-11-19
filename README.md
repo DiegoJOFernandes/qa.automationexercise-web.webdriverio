@@ -12,11 +12,7 @@ Este projeto é uma automação de testes baseada no framework **WebDriverIO** p
 - **Framework de Automação**: [WebDriverIO](https://webdriver.io/)
 - **Relatório de Testes**: Allure Reports
 - **Pipeline CI/CD**: GitHub Actions
-
-### Restrições
-- **Sintaxe Gherkin NÃO deve ser utilizada**.
-- Os testes devem rodar em **modo headless**.
-
+- 
 ---
 
 ## Casos de Teste Automatizados
@@ -25,10 +21,10 @@ Este projeto é uma automação de testes baseada no framework **WebDriverIO** p
    - Cadastrar um novo usuário e validar o fluxo de criação de conta.
 
 2. ~~**Search Product** (Test Case 9)~~
-   ~~- Realizar uma busca por produtos e validar os resultados retornados.~~
+   - ~~Realizar uma busca por produtos e validar os resultados retornados.~~
 
 3. ~~**Verify Product Quantity in Cart** (Test Case 13)~~
-   ~~- Adicionar um produto ao carrinho, ajustar a quantidade e validar se o carrinho reflete corretamente.~~
+   - ~~Adicionar um produto ao carrinho, ajustar a quantidade e validar se o carrinho reflete corretamente.~~
 
 4. ~~**Add Products in Cart** (Test Case 12)~~
    - ~~Adicionar múltiplos produtos ao carrinho e verificar seus detalhes.~~
@@ -47,7 +43,7 @@ qa.automationexercise-web.webdriverio/
 │   ├── specs/                 # Arquivos de testes organizados por suítes
 │   │    └── registerUser.e2e.js                 
 │   ├── pageobjects/           # Page Objects para elementos e interações
-│   │    └── common
+│   │    └── common            # Page com elementos e funções comuns
 │   └── allure-results/        # Relatórios gerados pelo Allure
 │
 ├── wdio.conf.js               # Configuração principal do WebDriverIO
@@ -102,16 +98,10 @@ npx wdio run wdio.conf.js --spec test/specs/registerUser.e2e.js
    npm test
    ```
 
-2. Gere o relatório:
+2. Gere e abra relatório com um só comando:
    ```bash
-   npx allure generate test/reports/allure-results --clean
+   npm run report
    ```
-
-3. Abra o relatório:
-   ```bash
-   npx allure open
-   ```
-
 ---
 
 ## Pipeline CI/CD
@@ -128,21 +118,3 @@ O pipeline está configurado no GitHub Actions e realiza as seguintes etapas:
 - **Organização em Page Objects**: Todos os elementos e interações estão encapsulados em classes de Page Objects, garantindo maior reutilização e legibilidade.
 - **Testes em Suítes**: Cada caso de teste é mantido em arquivos separados dentro da pasta `specs/`.
 - **Relatórios Detalhados**: Integração com Allure Reports para visualização clara dos resultados.
-
----
-
-## Como Entregar o Projeto
-
-1. Faça um commit do código no repositório criado:
-   ```bash
-   git add .
-   git commit -m "Entrega do desafio de automação"
-   git push origin main
-   ```
-
-2. Compartilhe o link público do repositório via e-mail.
-
----
-
-## Contato
-Caso tenha dúvidas ou precise de mais informações, entre em contato em **[seu-email@exemplo.com](mailto:seu-email@exemplo.com)**.
